@@ -44,4 +44,12 @@ public class CalculatorTest {
 		
 		assertThat(actual, is(expected));
 	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void devideTest0Error() {
+		Calculator calc = new Calculator();
+		
+		calc.divide(5, 0);
+	}
+	
 }
